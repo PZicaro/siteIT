@@ -1,0 +1,269 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #eee;
+
+}
+a{
+    text-decoration: none;
+    color: inherit;
+
+}
+.btn{
+    display: inline-block;
+    padding: 15px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    background: #111;
+    color:#eee ;
+    border-radius: 5px;
+    transition: background 500ms ease;
+    letter-spacing: 2px;
+}
+.btn:hover{
+    cursor: pointer;
+    background: #000;
+
+}
+.headline{
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 50px;
+    letter-spacing: 2px;
+
+}
+/*navbar*/
+
+#navbar{
+    width: 100%;
+    background: #111;
+    color: #eee;
+    position: fixed;
+}
+#navbar-container{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size:2rem;
+}
+
+#navbar-items{
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+}
+#navbar-items li {
+    padding: 10px;
+}
+
+/*Showcase*/
+#showcase{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+    background:url(/it-solutions-start/img/showcase.jpg) no-repeat center center/cover;
+
+    /*overlay*/
+    background-color: rgba(0,0,0,0.3);
+    background-blend-mode:color;
+}
+#showcase-container{
+    text-align: center;
+}
+#showcase-container h2{
+    font-size: 2.5rem;
+}
+#showcase-container p {
+    font-size: 1.2rem;
+    padding: 7px 0;
+}
+#clients{
+    width: 100%;
+    color: #111;
+    padding: 50px;
+}
+#clients-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+    padding: 15px;
+}
+.client{
+    display: inline-block;
+    width: 25%;
+}
+#features{
+    width: 100%;
+    color: #eee;
+    background-color: #222;
+    padding: 50px;
+}
+#features-container{
+    width:100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 50px;
+}
+.feature{
+    display: flex;
+    flex-direction: column;
+    background: #333;   
+    padding: 20px;
+}
+.feature-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/*produto*/
+
+#product{
+    width: 100%;
+    padding: 50px;
+    
+}
+#product-container{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#items{
+    max-width: 500px;
+}
+#items .item {
+    display: flex;
+    margin: 15px 0;
+    font-size: 1.2rem;
+}
+.testimonial{
+    display: flex;
+    align-items: center;
+    background: #333;
+    font-size: 1.2rem;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius:5px ;
+}
+#testimonials{
+    width: 100%;
+    background: #222;
+    color: #eee;
+    padding: 50px;
+}
+#testimonials-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.testimonial .testimonial-image{
+    height: 200px;
+    width: auto;
+    border-radius: 50%;
+    margin: 15px ;
+}
+#gallery{
+    width: 90%;
+    margin: auto;
+    padding: 50px;
+   
+}
+#gallery-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    justify-content: center;
+}
+.gallery-image{
+    display: inline-block;
+    width: 460px;
+    height: 320px;
+    border-radius: 5px;
+}
+#footer {
+    background-color: #222;
+    color: #eee;
+    padding: 30px;;
+    text-align: center;
+}
+@media  (max-width:768px) {
+    #navbar{
+        height: 220px;
+        position: static;
+    }
+    #navbar-container{
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    #navbar-items{
+        flex-direction: column;
+        text-align: center;
+    }
+    /*pegando a segunda filha de nabaritems*/
+    #navbar-items li:nth-child(2){
+                border-top: 1px solid #333;
+                border-bottom: 1px solid #333;
+    }
+    #navbar-items li:nth-child(3){
+       
+        border-bottom: 1px solid #333;
+}
+/*clients*/
+#clients-container{
+    grid-template-columns: repeat(2,1fr);
+}
+.client{
+    width: 50%;
+}
+#features-container{
+    grid-template-columns: 1fr;
+}
+#features-container .feature:nth-child(2){
+   
+    margin: 15px 0;
+
+}
+#product-container{
+    flex-direction: column;
+    
+}
+.items{
+    width: 90%;
+}
+.item{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 5px;
+}
+/*testimonials*/
+.testimonial{
+    flex-direction: column;
+    text-align: center;
+}
+#gallery-container{
+    grid-template-columns: 1fr;
+
+}
+.gallery-image{
+    width: 100%;
+}
+    
+    
+}
